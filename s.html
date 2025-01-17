@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>张脑丸大冒险</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background-color: #f0f0f0;
+            font-family: Arial, sans-serif;
+        }
+        .game-container {
+            text-align: center;
+            background-color: #fff;
+            padding: 50px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+        }
+        .game-title {
+            font-size: 36px;
+            color: #333;
+            margin-bottom: 20px;
+        }
+        .start-button {
+            display: inline-block;
+            padding: 15px 30px;
+            font-size: 20px;
+            color: #fff;
+            background-color: #007bff;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            text-decoration: none;
+        }
+        .start-button:hover {
+            background-color: #0056b3;
+        }
+    </style>
+</head>
+<body>
+    <div class="game-container">
+        <h1 class="game-title">欢迎来到张脑丸大冒险</h1>
+        <button class="start-button" onclick="startGame()">开始游戏</button>
+    </div>
+
+    <script>
+        function startGame() {
+            window.location.href="main.html";
+        }
+    </script>
+</body>
+</html>
