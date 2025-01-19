@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>张脑丸的保险</title>
+    <style>
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background-color: #f0f0f0;
+        }
+        .container {
+            text-align: center;
+        }
+        #result {
+            margin-top: 20px;
+            font-size: 24px;
+            font-weight: bold;
+            color: #333;
+        }
+        button {
+            position:fixed;
+            top:145px;
+            left:120px;
+            font-size: 18px;
+            cursor: pointer;
+            border-radius:4px;
+        }
+        #prizeImage {
+            margin-top: 20px;
+            max-width: 300px;
+        }
+        #bx {
+            position:fixed;
+            height:90px;
+            width:90px;
+            top:45px;
+            left:130px;
+        }
+        #back{
+          position:fixed;
+          top:5px;
+          left:5px;
+          height:60px;
+          width:90px;
+          background-color:#7affb6;
+          border-radius:10px;
+          border-width:0px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <img id="bx" src="http://xmxiaomi.github.io/znw/bx.jpg"/>
+        <button onclick="drawLottery()">开启保险箱</button>
+        <div id="result"></div>
+        <button id="back" onclick="main()">返回</button>
+        <img id="prizeImage" src="" alt="奖品图片" style="display:none;">
+    </div>
+
+    <script>
+        const prizes = [
+            {name: "高级宠物扩容箱", image: "http://xmxiaomi.github.io/znw/prize1.jpg"},
+            {name: "纪念数字币", image: "http://xmxiaomi.github.io/znw/prize2.jpg"},
+            {name: "汽油桶", image: "http://xmxiaomi.github.io/znw/prize3.jpg"},
+            {name: "纪念金币", image: "http://xmxiaomi.github.io/znw/prize4.jpg"},
+            {name: "纪念银币", image: "http://xmxiaomi.github.io/znw/prize5.jpg"},
+            {name: "相机", image: "http://xmxiaomi.github.io/znw/prize6.jpg"},
+            
+        ]; // 奖品列表
+
+        function drawLottery() {
+            const resultDiv = document.getElementById("result");
+            const prizeImage = document.getElementById("prizeImage");
+            const randomIndex = Math.floor(Math.random() * prizes.length);
+            const prize = prizes[randomIndex];
+            resultDiv.textContent = `恭喜获得${prize.name}！`;
+            prizeImage.src = prize.image;
+            prizeImage.style.display = "block";
+        }
+        function main(){
+        window.location.href="main.html";
+        }
+    </script>
+</body>
+</html>
